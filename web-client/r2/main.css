@@ -1,0 +1,215 @@
+html, body {
+    margin: 0;
+    width: 100%; 
+    height: 100%;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+#history {
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:100px;
+    overflow: overlay;
+}
+.message {
+	display:block;
+	box-sizing: border-box;
+}
+.content {
+    display: block; 
+    padding: 12px;
+}
+.content::before {
+    content: ">";
+    float:left;
+    padding: 6px 6px;
+    color: gray;
+    background: #CFF09E;
+    margin-top: -6px;
+    margin-right: 6px;
+}
+.bot {
+    background: rgba(255,0,0,0.02);
+}
+.bot .content::before {
+    content: "<";
+    background: #F06B50;
+}
+.content span {
+    outline: none;
+    min-width: 16px;
+}
+.content span:after {
+    content: " ";
+}
+.red {
+    background: #F06B50;
+    opacity: .5;
+    padding: 6px 6px;
+    margin-left: -6px;
+    cursor: pointer;
+}
+.red:hover {
+    background: #F06B50;
+    opacity: 1;
+}
+.input {
+	position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 300px;
+}
+#write {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    padding: 15px;
+    width: 100%;
+	resize: none;
+    box-sizing: border-box;
+    outline: none;
+    border: 0;
+    border-top: solid 1px gray;
+}
+#write:focus{
+    border-top: solid 1px black;
+}
+#input {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    padding: 15px;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb:vertical {
+  background-color: #DDD;
+}
+
+/* music addon */
+
+.music {
+    height: 40px;
+    overflow: hidden;
+}
+.music .content, .track {
+    height: 28px;
+    display: block;
+}
+.music span:after, .music-pack span:after {
+    display: none;
+}
+.playbtn {
+    position: relative;
+    top: -6px;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: #F06B50;
+    padding: 0;
+}
+.progress {
+    width: 400px;
+    position: relative;
+    top: -6px;
+    padding: 0;
+    display: inline-block;
+    height: 100%;
+    max-width: 100%;
+    background: #EEE;
+}
+.bot .progress {
+    left: -4px;
+}
+.progress span {
+    display: inline-block;
+    position: relative;
+    background: #F06B50;
+    height: 28px;
+    width: 128px;
+    min-width: 0px;
+    transition: width 200ms linear;
+    -webkit-transition: width 200ms linear;
+}
+.music .textlayer, .music-pack .textlayer {
+    text-align: center;
+    z-index: 2;
+    position: absolute;
+    top:0;left:0;
+    box-sizing: border-box;
+    padding: 6px;
+    height: 100%;
+    display: inline-block;
+    width: 100%;
+    width: calc(100% - 28px);
+    background: none;
+    color: black;
+    text-shadow: 0px 0px 2px white;
+}
+
+.track:not(:first-of-type) {
+    margin: 3px 26px;
+}
+
+.icon-play {
+    width: 20px;
+    height: 20px;
+    margin: 4px;
+    opacity: .7;
+    background-image: url('play.svg');
+    background-size: contain;
+}
+.icon-pause {
+    width: 20px;
+    height: 20px;
+    margin: 4px;
+    opacity: .7;
+    background-image: url('pause.svg');
+    background-size: contain;
+}
+
+/* video plugin */
+
+.video video {
+    width: 428px;
+    background: #EEE;
+    margin-top: -6px;
+}
+.video .progressbar {
+    display: block;
+    width: 428px;
+    height: 5px;
+    background: transparent;
+    position: relative;
+    left: 26px;
+    top: -8px;
+}
+.video .progressbar span {
+    padding: 0; margin: 0;
+    position: absolute;
+    display: inline-block;
+    height: 5px;
+    width: 30%;
+    min-width: 0px;
+    background: #F06B50;
+    transition: width 200ms linear;
+    -webkit-transition: width 200ms linear;
+}
+
+/* image plugin */
+
+.image img {
+    max-width: 428px;
+    margin-top: -6px;
+}

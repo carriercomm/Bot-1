@@ -1,0 +1,8 @@
+{
+	"name": "talk",
+	"author": "paulll",
+	"nodejs": false,
+	"require": [],
+	"service": false,
+	"actions": []
+}

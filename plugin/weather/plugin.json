@@ -1,0 +1,9 @@
+{
+	"name": "weather",
+	"author": "paulll",
+	"outputs": "text",
+	"nodejs": true,
+	"require": ["forecast.io"],
+	"service": false,
+	"actions": ["weather_today", "weather_nextday", "weather_raintoday", "weather_rainnextday"]
+}
