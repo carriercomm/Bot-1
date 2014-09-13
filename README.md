@@ -8,7 +8,9 @@ Features
 * Modular architecture
 * Web UI for db administration
 
-=== I/O interfaces
+
+I/O interfaces
+====
 
 Inputs
 * Pushbullet (buggy, working on it)
@@ -23,7 +25,8 @@ Outputs
 * Pushbullet
 * Printer (CUPS required)
 
-=== APIs
+APIs
+====
 
 * I/O
 * Wikipedia
@@ -32,7 +35,8 @@ Outputs
 * DataBase
 * TextParsing
 
-=== Todo
+Todo
+====
 
 * Move vkontakte API to I/O
 * 
